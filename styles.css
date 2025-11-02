@@ -1,0 +1,171 @@
+:root {
+      --primary: #0da1b0;
+      --danger: #ff4d4d;
+      --warning: #ffb100;
+      --bg-light: #f4f4f4;
+      --border: #ddd;
+      --text: #333;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    background: var(--bg-light);
+    color: var(--text);
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.3rem;
+}
+
+/* formulario */
+
+form {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.field {
+    flex: 1;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+input, textarea {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.5rem;
+    font-size: 0.95rem;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid var(--primary);
+}
+
+input.error {
+    border-color: var(--danger);
+    background: #ffe5e5;
+}
+
+.error-msg {
+    color: var(--danger);
+    font-size: 0.8rem;
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    width: fit-content;
+}
+
+button:hover {
+    background: #005fcc;
+}
+
+/* tabla */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem;
+}
+
+th {
+    background: var(--bg-light);
+}
+
+.actions button {
+    margin-right: 0.3rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+.btn-delete {
+    background: var(--danger);
+}
+
+.btn-edit {
+    background: var(--warning);
+    color: black;
+}
+
+.sinCitas {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
+
+/* mensaje */
+
+#mensaje {
+    background: #eaf9ea;
+    color: green;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    display: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+footer{
+    padding:22px 36px;
+    display:flex;
+    align-items:center;
+    color:var(--muted);
+    font-size:13px;    
+}
+
+/* para centrar el contenido del footer */
+
+.footer-inner{
+    max-width:980px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;    
+    gap:12px;
+    padding:8px 6px;
+}

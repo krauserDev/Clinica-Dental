@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DavanteDent - Tu clínica dental.">
+    <title>DavanteDent - Inicio</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
+            fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+            class="icon icon-tabler icons-tabler-outline icon-tabler-dental">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 5.5c-1.074 -.586 -2.583 -1.5 -4 -1.5c-2.1 0 -4 1.247 -4 5c0 4.899 1.056 8.41 2.671 10.537c.573 .756 1.97 .521 2.567 -.236c.398 -.505 .819 -1.439 1.262 -2.801c.292 -.771 .892 -1.504 1.5 -1.5c.602 0 1.21 .737 1.5 1.5c.443 1.362 .864 2.295 1.262 2.8c.597 .759 2 .993 2.567 .237c1.615 -2.127 2.671 -5.637 2.671 -10.537c0 -3.74 -1.908 -5 -4 -5c-1.423 0 -2.92 .911 -4 1.5z" />
+            <path d="M12 5.5l3 1.5" />
+        </svg>
+        <h1>DavanteDent</h1>
+    </header>
+
+  <main>
+    <!-- Gestión de citas -->
+
+    <section id="gestion">
+      <h2>Gestión de Citas</h2>
+
+      <div id="mensaje">✅ Cita guardada correctamente</div>
+
+      <form id="form-cita" novalidate> 
+        <div class="row">
+          <div class="field">
+            <label>Nombre</label>
+            <input type="text" id="nombre" required>
+            <div class="error-msg"></div>
+          </div>
+          <div class="field">
+            <label>Apellidos</label>
+            <input type="text" id="apellidos" required>
+            <div class="error-msg"></div>
+          </div>
+          <div class="field">
+            <label>DNI</label>
+            <input type="text" id="dni" required>
+            <div class="error-msg"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label>Teléfono</label>
+            <input type="text" id="telefono" required>
+            <div class="error-msg"></div>
+          </div>
+          <div class="field">
+            <label>Fecha de Nacimiento</label>
+            <input type="date" id="nacimiento" required>
+            <div class="error-msg"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label>Fecha de la Cita</label>
+            <input type="date" id="fecha" required>
+            <div class="error-msg"></div>
+          </div>
+          <div class="field">
+            <label>Hora</label>
+            <input type="time" id="hora" required>
+            <div class="error-msg"></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Observaciones</label>
+          <textarea id="observaciones" rows="3"></textarea>
+          <div class="error-msg"></div>
+        </div>
+
+        <button type="submit">Guardar Cita</button>
+      </form>
+    </section>
+
+    <!-- Listado de citas -->
+
+    <section id="listado">
+      <h2>Listado de Citas</h2>
+
+      <table id="tabla-citas">
+        <thead>
+          <tr>
+            <th>Nº</th>
+            <th>Paciente</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Teléfono</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="sinCitas"><td colspan="6">No hay citas registradas</td></tr> <!-- Fila que se muestra cuando no hay citas -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2025 DavanteDent. Todos los derechos reservados.</div>
+      <div>Av. Constitución 5, Alicante</div>
+      <div>965 123 456</div>
+      <div>contacto@davantedent.com</div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
