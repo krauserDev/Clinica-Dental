@@ -49,7 +49,7 @@ function mostrarCitas() { // Función para mostrar las citas en la tabla HTML
       </td>
     `;
 
-    // Asignamos funciones a los botones editar y eliminar que se ejecutaran al hacer click 
+    // Asignamos funciones a los botones editar y eliminar que se ejecutarán al hacer click 
 
     fila.querySelector(".btn-edit").onclick = () => editarCita(cita.id);
     fila.querySelector(".btn-delete").onclick = () => eliminarCita(cita.id);
@@ -108,6 +108,15 @@ form.onsubmit = e => { // Se ejecuta la función cuando el usuario haga click en
   e.preventDefault(); // Evitamos que se recargue la página y que el formulario se envíe al servidor ya que lo queremos manejar con JavaScript 
   if (!validarFormulario()) return; // Si el formulario no es válido, salimos de la función 
 
+  const nombre = document.querySelector("#nombre");
+  const apellidos = document.querySelector("#apellidos");
+  const dni = document.querySelector("#dni");
+  const telefono = document.querySelector("#telefono");
+  const nacimiento = document.querySelector("#nacimiento");
+  const fecha = document.querySelector("#fecha");
+  const hora = document.querySelector("#hora");
+  const observaciones = document.querySelector("#observaciones");
+
   // Obtenemos los valores de los campos del formulario
 
   const cita = {
@@ -150,14 +159,14 @@ function editarCita(id) { //Se llama a esta función cuando el usuario hace clic
   // Rellenamos el formulario con los datos de la cita para que el usuario pueda editarlos
 
   editandoId = id; // Guardamos el ID de la cita que se está editando
-  nombre.value = cita.nombre; // Rellenamos el campo nombre con el valor de la cita
-  apellidos.value = cita.apellidos; // Rellenamos el campo apellidos con el valor de la cita
-  dni.value = cita.dni; // Rellenamos el campo dni con el valor de la cita
-  telefono.value = cita.telefono; // Rellenamos el campo telefono con el valor de la cita
-  nacimiento.value = cita.nacimiento; // Rellenamos el campo nacimiento con el valor de la cita
-  fecha.value = cita.fecha; // Rellenamos el campo fecha con el valor de la cita
-  hora.value = cita.hora; // Rellenamos el campo hora con el valor de la cita
-  observaciones.value = cita.observaciones; // Rellenamos el campo observaciones con el valor de la cita
+  nombre.value = cita.nombre; // Rellenamos el campo nombre con el valor de la cita y así sucesivamente con todos los campos
+  apellidos.value = cita.apellidos; 
+  dni.value = cita.dni; 
+  telefono.value = cita.telefono; 
+  nacimiento.value = cita.nacimiento; 
+  fecha.value = cita.fecha; 
+  hora.value = cita.hora;  
+  observaciones.value = cita.observaciones; 
 
   window.scrollTo({ top: 0, behavior: "smooth" }); // Desplazamos la ventana hacia arriba para que el usuario vea el formulario
 }
