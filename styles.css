@@ -1,6 +1,8 @@
+/* variables de color para usar en todo el proyecto */
+
 :root {
       --primary: #0da1b0;
-      --danger: #ff4d4d;
+      --error: #ff4d4d;
       --warning: #ffb100;
       --bg-light: #f4f4f4;
       --border: #ddd;
@@ -76,12 +78,12 @@ input:focus, textarea:focus {
 }
 
 input.error {
-    border-color: var(--danger);
+    border-color: var(--error);
     background: #ffe5e5;
 }
 
 .error-msg {
-    color: var(--danger);
+    color: var(--error);
     font-size: 0.8rem;
 }
 
@@ -124,7 +126,7 @@ th {
 }
 
 .btn-delete {
-    background: var(--danger);
+    background: var(--error);
 }
 
 .btn-edit {
