@@ -48,13 +48,13 @@ form {
     margin-bottom: 2rem;
 }
 
-.row {
+.filas { 
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
-.field {
+.campos { 
     flex: 1;
     min-width: 180px;
     display: flex;
@@ -163,7 +163,7 @@ footer{
 
 /* para centrar el contenido del footer */
 
-.footer-inner{
+.footer-inner{ 
     max-width:980px;
     margin:0 auto;
     display:flex;
@@ -171,3 +171,4 @@ footer{
     gap:12px;
     padding:8px 6px;
 }
+
