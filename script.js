@@ -1,6 +1,6 @@
 // VARIABLES GLOBALES 
     let citas = []; // Array donde guardamos todas las citas
-    let editandoId = null; // ID de la cita que se está editando ( null si no se está editando ninguna )
+    let editandoId = null; // ID de la cita que se está editando (null si no se está editando ninguna)
     const form = document.querySelector("#form-cita"); //Referencia al id del formulario
     const tabla = document.querySelector("#tabla-citas tbody"); //Referencia al cuerpo de la tabla
     const mensaje = document.querySelector("#mensaje"); //Referencia al div de mensajes
@@ -184,3 +184,4 @@ function eliminarCita(id) { // Se llama a esta función cuando el usuario hace c
 
 // Inicializar
 cargarCitas(); //Llama a cargarCitas para mostrar en la tabla las citas almacenadas al cargar la página
+
